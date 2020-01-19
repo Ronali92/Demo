@@ -24,6 +24,7 @@ public class LoginTest extends TestBase {
 	@Test
 	public void Login() {
 		try {
+			System.out.println("Inside Login Method");
 			loginagain=loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -34,6 +35,7 @@ public class LoginTest extends TestBase {
 	
 	@AfterMethod
 	public void teardown() {
+		System.out.println("Inside tear down method");
 		driver.quit();
 	}
 	
